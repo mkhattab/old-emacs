@@ -1,0 +1,8 @@
+syntax: glob
+*~
+*.pyc
+vendor/python-packages/*/build
+tramp
+auto-save-list
+ac-comphist.dat
+
