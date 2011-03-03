@@ -1,6 +1,8 @@
 syntax: glob
 *~
 *.pyc
+*.elc
+*.egg*
 vendor/python-packages/*/build
 tramp
 auto-save-list
