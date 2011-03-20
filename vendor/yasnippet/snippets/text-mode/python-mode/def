@@ -4,9 +4,12 @@
 # contributor: Yasser González Fernández <yglez@uh.cu>
 # --
 def ${1:name}($2):
+    """$3
     ${2:$
       (let* 
-        ((args
+        ((indent
+            (concat "\n" (make-string (current-column) 32)))
+           (args
             (mapconcat
              '(lambda (x)
                 (if (not (string= (nth 0 x) ""))
