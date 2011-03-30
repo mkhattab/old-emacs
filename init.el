@@ -9,5 +9,6 @@
 (load-library "mustafa-yasnippet")
 (load-library "mustafa-auto-complete")
 (load-library "mustafa-python-mode")
+(load-library "mustafa-js-mode")
 (load-library "mustafa-ido-mode")
 (load-library "mustafa-misc-options")
