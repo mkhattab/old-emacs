@@ -11,7 +11,9 @@
 (load-library "mustafa-python-mode")
 (load-library "mustafa-js-mode")
 (load-library "mustafa-ido-mode")
+(load-library "mustafa-markdown-mode")
 (load-library "mustafa-misc-options")
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
