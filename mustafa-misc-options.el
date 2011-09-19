@@ -7,7 +7,6 @@
 ;;(menu-bar-mode 0)
 =======
 (menu-bar-mode 0)
->>>>>>> 13d4c5e4ef31011a557aaa73c5c49b2ac77abc14
 (set-scroll-bar-mode 'right)
 (setq inhibit-splash-screen t)
 
@@ -20,9 +19,6 @@
 (setq uniquify-buffer-name-style 'post-forward
       uniquify-separator "|")
 
-<<<<<<< HEAD
-(windmove-default-keybindings)
-=======
 (windmove-default-keybindings)
 
 ;; Add SCSS files to CSS mode list
@@ -33,4 +29,3 @@
 			     (split-window)
 			     (other-window 1)
 			     (switch-to-buffer (other-buffer))))
->>>>>>> 13d4c5e4ef31011a557aaa73c5c49b2ac77abc14

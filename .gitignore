@@ -2,16 +2,13 @@
 *.pyc
 *.elc
 *.egg*
-<<<<<<< HEAD
 vendor/python-packages/*/build
 tramp
 auto-save-list
 ac-comphist.dat
-
-=======
 .hg
 vendor/python-packages/*/build
 tramp
 auto-save-list
 ac-comphist.dat
->>>>>>> 13d4c5e4ef31011a557aaa73c5c49b2ac77abc14
+*.orig
