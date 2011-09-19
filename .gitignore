@@ -1,0 +1,9 @@
+*~
+*.pyc
+*.elc
+*.egg*
+.hg
+vendor/python-packages/*/build
+tramp
+auto-save-list
+ac-comphist.dat

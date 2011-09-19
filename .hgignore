@@ -1,0 +1,11 @@
+syntax: glob
+*~
+*.pyc
+*.elc
+*.egg*
+vendor/python-packages/*/build
+tramp
+auto-save-list
+ac-comphist.dat
+.org*
+session.*
