@@ -1,0 +1,14 @@
+*~
+*.pyc
+*.elc
+*.egg*
+vendor/python-packages/*/build
+tramp
+auto-save-list
+ac-comphist.dat
+.hg
+vendor/python-packages/*/build
+tramp
+auto-save-list
+ac-comphist.dat
+*.orig

@@ -1,0 +1,4 @@
+(add-to-list 'load-path nil)
+(load-file "/usr/share/emacs/23.2/lisp/cedet/common/cedet.el")
+(require 'ecb)
+(setq debug-on-error t)
