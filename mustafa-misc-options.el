@@ -26,3 +26,9 @@
 			     (split-window)
 			     (other-window 1)
 			     (switch-to-buffer (other-buffer))))
+
+;; initial window size
+(add-to-list 'default-frame-alist '(left . 50))
+(add-to-list 'default-frame-alist '(top . 100))
+(add-to-list 'default-frame-alist '(height . 47))
+(add-to-list 'default-frame-alist '(width . 183))
