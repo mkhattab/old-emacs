@@ -3,7 +3,6 @@
 ;; Autoload python-mode for .py files
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;;; Electric pairs
 (add-hook 'python-mode-hook
@@ -21,12 +20,16 @@
     (insert-pair)))
 ;;; End Electric pairs
 
-;;; Check for ipython
-(if (file-exists-p "/usr/bin/ipython")
-    (require 'ipython))
+;; ipython
+(setq ipython-command "/usr/local/bin/ipython")
+(setq py-python-command-args '("-pylab" "-colors" "NoColor"))
+(setq ipython-completion-command-string
+  "print(__IP.Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
+(require 'ipython)
 
 ;;; Virtualenv
 (require 'virtualenv)
+(setq virtualenv-root "~/.virtualenv")
 
 ;;; Pymacs
 (require 'pymacs)
