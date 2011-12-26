@@ -32,3 +32,10 @@
 (add-to-list 'default-frame-alist '(top . 100))
 (add-to-list 'default-frame-alist '(height . 47))
 (add-to-list 'default-frame-alist '(width . 183))
+
+
+;; tramp ssh config autocompletion
+(require 'tramp)
+(tramp-set-completion-function "ssh"
+			       '((tramp-parse-sconfig "~/.ssh/config")))
+
