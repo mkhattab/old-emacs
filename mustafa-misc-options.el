@@ -1,6 +1,5 @@
 ;; Misc options, e.g., delete-selection-mode, removing toolbar, etc.
 
-
 (delete-selection-mode 1)
 (tool-bar-mode 0)
 ;; no menu for linux, but for mac osx ok
@@ -13,6 +12,9 @@
 ;; Disable auto-save because it's annoying
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+
+;; less verbose questions
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Uniquify
 (require 'uniquify)
