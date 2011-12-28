@@ -21,11 +21,18 @@
 ;;; End Electric pairs
 
 ;; ipython
-(setq ipython-command "/usr/local/bin/ipython")
-(setq py-python-command-args '("-pylab" "-colors" "NoColor"))
-(setq ipython-completion-command-string
-  "print(__IP.Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
-(require 'ipython)
+(let ((ipython-path (or
+		     (and (file-exists-p "/usr/local/bin/ipython") "/usr/local/bin/ipython")
+		     (and (file-exists-p "/usr/bin/ipython") "/usr/bin/ipython"))
+		    ))
+  (if ipython-path
+      (progn
+	(setq ipython-command "/usr/local/bin/ipython")
+	(setq py-python-command-args '("-pylab" "-colors" "NoColor"))
+	(setq ipython-completion-command-string
+	      "print(__IP.Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
+	(require 'ipython))
+    nil))
 
 ;;; Virtualenv
 (require 'virtualenv)

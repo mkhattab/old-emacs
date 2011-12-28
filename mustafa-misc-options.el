@@ -3,7 +3,10 @@
 
 (delete-selection-mode 1)
 (tool-bar-mode 0)
-(menu-bar-mode 1)
+;; no menu for linux, but for mac osx ok
+(if (eq system-type 'darwin)
+    (menu-bar-mode 1)
+  (menu-bar-mode 0))
 (set-scroll-bar-mode 'right)
 (setq inhibit-splash-screen t)
 
@@ -29,9 +32,9 @@
 
 ;; initial window size
 (add-to-list 'default-frame-alist '(left . 50))
-(add-to-list 'default-frame-alist '(top . 100))
-(add-to-list 'default-frame-alist '(height . 47))
-(add-to-list 'default-frame-alist '(width . 183))
+(add-to-list 'default-frame-alist '(top . 75))
+(add-to-list 'default-frame-alist '(height . 35))
+(add-to-list 'default-frame-alist '(width . 137))
 
 
 ;; tramp ssh config autocompletion

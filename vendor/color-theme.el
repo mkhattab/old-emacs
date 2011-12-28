@@ -255,11 +255,11 @@ and no alist.
 This is used to make sure `default-frame-alist' really is an alist and not
 a plist.  In XEmacs, the alist is deprecated; a plist is used instead."
   (cond ((consp (car plist))
-	 plist)
-	((not (symbolp (car plist)))
-	 (error "Wrong type argument: plist, %S" plist))
-	(t
-	 (plist-to-alist plist)))); XEmacs only
+  	 plist)
+  	((not (symbolp (car plist)))
+  	 (error "Wrong type argument: plist, %S" plist))
+  	(t
+  	 (plist-to-alist plist)))); XEmacs only
 
 ;; Customization
 
