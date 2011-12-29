@@ -27,7 +27,7 @@
 		    ))
   (if ipython-path
       (progn
-	(setq ipython-command "/usr/local/bin/ipython")
+	(setq ipython-command ipython-path)
 	(setq py-python-command-args '("-pylab" "-colors" "NoColor"))
 	(setq ipython-completion-command-string
 	      "print(__IP.Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
