@@ -27,11 +27,13 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 
 ;; initial window size
-(add-to-list 'default-frame-alist '(left . 50))
-(add-to-list 'default-frame-alist '(top . 75))
-(add-to-list 'default-frame-alist '(height . 35))
-(add-to-list 'default-frame-alist '(width . 137))
-
+(if (eq system-type 'gnu/linux)
+    (progn
+      (add-to-list 'default-frame-alist '(left . 50))
+      (add-to-list 'default-frame-alist '(top . 75))
+      (add-to-list 'default-frame-alist '(height . 35))
+      (add-to-list 'default-frame-alist '(width . 137)))
+  nil)
 
 ;; tramp ssh config autocompletion
 (require 'tramp)
