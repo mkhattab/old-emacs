@@ -10,3 +10,6 @@
 			   (split-window)
 			   (other-window 1)
 			   (shell)))
+
+;;slime close parens at point
+(global-set-key "\C-c\C-q" 'slime-close-all-parens-in-sexp)
