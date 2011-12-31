@@ -26,12 +26,6 @@
 ;; Add SCSS files to CSS mode list
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 
-;; On window split, switch to other buffer intsead of opening the same one
-(global-set-key "\C-x2" '(lambda () (interactive) 
-			     (split-window)
-			     (other-window 1)
-			     (switch-to-buffer (other-buffer))))
-
 ;; initial window size
 (add-to-list 'default-frame-alist '(left . 50))
 (add-to-list 'default-frame-alist '(top . 75))
@@ -43,4 +37,3 @@
 (require 'tramp)
 (tramp-set-completion-function "ssh"
 			       '((tramp-parse-sconfig "~/.ssh/config")))
-
