@@ -38,6 +38,10 @@
 (setq virtualenv-root "~/.virtualenv")
 
 ;;; Pymacs
+
+;; add py subdir to pymacs load path
+(add-to-list 'pymacs-load-path "~/.emacs.d/py/")
+
 (require 'pymacs)
 (autoload 'pymacs-appy "pymacs")
 (autoload 'pymacs-call "pymacs")
