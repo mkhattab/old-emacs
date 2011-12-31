@@ -39,3 +39,8 @@
 (require 'tramp)
 (tramp-set-completion-function "ssh"
 			       '((tramp-parse-sconfig "~/.ssh/config")))
+
+(if (eq system-type 'gnu/linux)
+    (custom-set-faces
+     '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Monaco")))))
+  nil)
