@@ -29,7 +29,7 @@
       (progn
 	(setq ipython-command ipython-path)
 	(setq ipython-completion-command-string
-	      "print(__IP.Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
+	      "print(get_ipython().Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
 	(require 'ipython))
     nil))
 
