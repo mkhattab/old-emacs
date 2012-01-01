@@ -54,7 +54,11 @@
 (pymacs-load "ropemacs" "rope-")
 
 ;; Python rope completion stuff
-(ac-ropemacs-initialize)
-(setq ac-delay 0.5)
-(add-hook 'python-mode-hook (lambda ()
-			      (add-to-list 'ac-sources 'ac-source-ropemacs)))
+;; only for linux because auto-completion on mac os x is super slow
+(if (eq system-type 'gnu/linux)
+    (progn
+    (ac-ropemacs-initialize)
+    (setq ac-delay 0.5)
+    (add-hook 'python-mode-hook (lambda ()
+				  (add-to-list 'ac-sources 'ac-source-ropemacs))))
+  nil)
