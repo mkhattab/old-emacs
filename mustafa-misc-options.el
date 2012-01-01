@@ -33,7 +33,12 @@
       (add-to-list 'default-frame-alist '(top . 75))
       (add-to-list 'default-frame-alist '(height . 35))
       (add-to-list 'default-frame-alist '(width . 137)))
-  nil)
+  ;; mac os x
+  (progn
+    (add-to-list 'default-frame-alist '(left . 100))
+    (add-to-list 'default-frame-alist '(top . 100))
+    (add-to-list 'default-frame-alist '(height . 45))
+    (add-to-list 'default-frame-alist '(width . 170))))
 
 ;; tramp ssh config autocompletion
 (require 'tramp)
@@ -43,4 +48,6 @@
 (if (eq system-type 'gnu/linux)
     (custom-set-faces
      '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Monaco")))))
-  nil)
+  ;; mac os x
+  (custom-set-faces
+   '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 146 :width normal :foundry "unknown" :family "Monaco"))))))
