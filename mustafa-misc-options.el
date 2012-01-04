@@ -51,3 +51,6 @@
   ;; mac os x
   (custom-set-faces
    '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 146 :width normal :foundry "unknown" :family "Monaco"))))))
+
+;; start emacs server
+(server-start)
