@@ -54,3 +54,6 @@
 
 ;; start emacs server
 (server-start)
+
+;;aspell instead of ispell
+(setq-default ispell-program-name "/usr/local/bin/aspell")
