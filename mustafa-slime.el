@@ -3,21 +3,11 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/slime/")
 (add-to-list 'load-path "~/.emacs.d/vendor/slime/contrib/")
 
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
-
-(require 'slime)
-
-(slime-setup '(slime-fancy
-	       slime-banner))
-
-(let ((slime-path (or
-		   (and (file-exists-p "/usr/local/bin/sbcl") "/usr/local/bin/sbcl")
-		   (and (file-exists-p "/usr/bin/sbcl") "/usr/bin/sbcl"))
-		  ))
-  (if slime-path
-      (progn
-	(setq inferior-lisp-program slime-path)
-	(require 'slime)
-	(slime-setup '(slime-fancy
-		       slime-banner)))
-    nil))
+(let ((s-path (m-expand-prog-path "sbcl")))
+(if s-path
+    (progn
+      (setq inferior-lisp-program s-path)
+      (require 'slime)
+      (slime-setup '(slime-fancy
+		     slime-banner)))
+  (message "Cannot find SBCL!!!")))

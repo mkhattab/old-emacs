@@ -21,17 +21,14 @@
 ;;; End Electric pairs
 
 ;; ipython
-(let ((ipython-path (or
-		     (and (file-exists-p "/usr/local/bin/ipython") "/usr/local/bin/ipython")
-		     (and (file-exists-p "/usr/bin/ipython") "/usr/bin/ipython"))
-		    ))
-  (if ipython-path
-      (progn
-	(setq ipython-command ipython-path)
-	(setq ipython-completion-command-string
-	      "print(get_ipython().Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
-	(require 'ipython))
-    nil))
+(let ((ipython-path (m-expand-prog-path "ipython")))
+(if ipython-path
+    (progn
+      (setq ipython-command ipython-path)
+      (setq ipython-completion-command-string
+	    "print(get_ipython().Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
+      (require 'ipython))
+  (message "Cannot find Ipython!!!")))
 
 ;;; Virtualenv
 (require 'virtualenv)
