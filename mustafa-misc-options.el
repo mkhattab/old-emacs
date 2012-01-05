@@ -56,4 +56,4 @@
 (server-start)
 
 ;;aspell instead of ispell
-(setq-default ispell-program-name "/usr/local/bin/aspell")
+(setq-default ispell-program-name (m-expand-prog-path "aspell"))

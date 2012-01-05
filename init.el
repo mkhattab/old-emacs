@@ -4,6 +4,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 
+(load-library "mustafa-util-func")
 (load-library "mustafa-color-theme")
 (load-library "mustafa-ecb")
 (load-library "mustafa-yasnippet")
