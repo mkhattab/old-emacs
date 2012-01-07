@@ -19,6 +19,7 @@
 (load-library "mustafa-slime")
 (load-library "mustafa-shell-mode")
 (load-library "mustafa-global-keys")
+(load-library "mustafa-gnus")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

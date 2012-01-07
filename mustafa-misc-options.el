@@ -57,3 +57,6 @@
 
 ;;aspell instead of ispell
 (setq-default ispell-program-name (m-expand-prog-path "aspell"))
+
+;; homebrew macosx install bin path
+(setq exec-path (push "/usr/local/bin" exec-path))
