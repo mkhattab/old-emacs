@@ -21,14 +21,11 @@
 ;;; End Electric pairs
 
 ;; ipython
-(let ((ipython-path (m-expand-prog-path "ipython")))
-(if ipython-path
-    (progn
-      (setq ipython-command ipython-path)
-      (setq ipython-completion-command-string
-	    "print(get_ipython().Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
-      (require 'ipython))
-  (message "Cannot find Ipython!!!")))
+
+(setq ipython-command (or (m-expand-prog-path "ipython") ""))
+(setq ipython-completion-command-string
+      "print(get_ipython().Completer.all_completions('%s')[0]) #PYTHON-MODE SILENT\n")
+(require 'ipython)
 
 ;;; Virtualenv
 (require 'virtualenv)
@@ -59,3 +56,4 @@
     (add-hook 'python-mode-hook (lambda ()
 				  (add-to-list 'ac-sources 'ac-source-ropemacs))))
   nil)
+

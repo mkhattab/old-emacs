@@ -1,9 +1,5 @@
 ;;; Misc options, e.g., delete-selection-mode, removing toolbar, etc.
 
-;; path env variable on mac os x
-(if (eq system-type 'darwin)
-    (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
-
 (delete-selection-mode 1)
 (tool-bar-mode 0)
 ;; no menu for linux, but for mac osx ok

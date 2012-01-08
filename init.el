@@ -1,6 +1,12 @@
 ;; Mustafa Khattab
 
-; Load path
+;; Eval before anything else
+
+;; path env variable on mac os x
+(if (eq system-type 'darwin)
+    (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
+
+;; Load path
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 
