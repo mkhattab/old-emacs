@@ -1,6 +1,7 @@
 ;;; Misc options, e.g., delete-selection-mode, removing toolbar, etc.
 
 (delete-selection-mode 1)
+(scroll-bar-mode 0)
 (tool-bar-mode 0)
 ;; no menu for linux, but for mac osx ok
 (if (eq system-type 'darwin)
