@@ -21,11 +21,11 @@
 (load-library "mustafa-org-mode")
 (load-library "mustafa-ido-mode")
 (load-library "mustafa-markdown-mode")
-(load-library "mustafa-misc-options")
 (load-library "mustafa-slime")
 (load-library "mustafa-shell-mode")
 (load-library "mustafa-global-keys")
 (load-library "mustafa-gnus")
+(load-library "mustafa-misc-options")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
