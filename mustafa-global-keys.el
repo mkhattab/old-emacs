@@ -13,3 +13,6 @@
 
 ;;slime close parens at point
 (global-set-key "\C-c\C-q" 'slime-close-all-parens-in-sexp)
+
+;; ido-imenu
+(global-set-key "\C-x\C-i" 'ido-imenu)
