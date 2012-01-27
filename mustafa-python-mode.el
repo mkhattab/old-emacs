@@ -1,4 +1,7 @@
-;;My python mode stuff
+;;; My python mode stuff
+
+;; remove wisent-python hook
+(remove-hook 'python-mode-hook 'wisent-python-default-setup)
 
 ;; Autoload python-mode for .py files
 (autoload 'python-mode "python-mode" "Python Mode." t)
@@ -12,24 +15,6 @@
 	    (define-key py-mode-map "\(" 'electric-pair)
 	    (define-key py-mode-map "["  'electric-pair)
 	    (define-key py-mode-map "{"  'electric-pair)))
-
-;; Jump to function definitions imenu index creation
-(defun py-imenu-hook ()
-  (require 'pymacs)
-  (unless (fboundp 'py-imenu-make-imenu)
-    (pymacs-load "py_imenu" "py-imenu-"))
-  (setq imenu-create-index-function
-     (lambda ()
-        (let (menu)
-          (message "creating imenu index...")
-          (condition-case nil
-              (setq menu (py-imenu-make-imenu))
-            (error nil
-                   (setq menu (py-imenu-create-index-function))))
-          (message "creating imenu index...done")
-          menu))))
-
-(add-hook 'python-mode-hook 'py-imenu-hook)
 
 (defun electric-pair ()
   "Insert character pair without surrounding spaces"
