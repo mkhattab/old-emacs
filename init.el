@@ -22,6 +22,7 @@
 (load-library "mustafa-ido-mode")
 (load-library "mustafa-markdown-mode")
 (load-library "mustafa-shell-mode")
+(load-library "mustafa-workgroups")
 (load-library "mustafa-slime")
 (load-library "mustafa-global-keys")
 (load-library "mustafa-gnus")
