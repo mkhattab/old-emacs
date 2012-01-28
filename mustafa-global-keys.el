@@ -16,3 +16,6 @@
 
 ;; ido-imenu
 (global-set-key "\C-x\C-i" 'ido-imenu)
+
+;; ido find tags
+(global-set-key "\C-x\C-u" 'm-ido-find-tag)

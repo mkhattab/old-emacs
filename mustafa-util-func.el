@@ -11,6 +11,7 @@
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to."
   (interactive)
+  (require 'imenu)
   (imenu--make-index-alist)
   (let ((name-and-pos '())
         (symbol-names '()))
@@ -37,3 +38,18 @@
     (let* ((selected-symbol (ido-completing-read "Symbol? " symbol-names))
            (position (cdr (assoc selected-symbol name-and-pos))))
       (goto-char position))))
+
+(defun m-ido-find-tag ()
+  (interactive)
+  (unless (boundp 'tags-completion-table)
+    (call-interactively 'visit-tags-table))
+  (tags-completion-table)
+  (let (tag-names)
+    (mapc (lambda (x)
+	    (unless (integerp x)
+	      (push (prin1-to-string x t) tag-names)))
+	  tags-completion-table)
+    (find-tag (ido-completing-read "Tag? " tag-names))))
+
+
+
