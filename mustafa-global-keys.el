@@ -9,7 +9,7 @@
 (global-set-key "\C-x!" '(lambda () (interactive) 
 			   (split-window)
 			   (other-window 1)
-			   (ansi-term "/bin/bash")))
+			   (multi-term)))
 
 ;;slime close parens at point
 (global-set-key "\C-c\C-q" 'slime-close-all-parens-in-sexp)
