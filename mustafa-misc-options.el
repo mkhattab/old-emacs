@@ -64,3 +64,7 @@
 
 ;; disable stupid beep
 (setq ring-bell-function '(lambda ()))
+
+
+;; auto-load auto-revert-tail-mode on log files
+(add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
