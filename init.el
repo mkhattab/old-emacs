@@ -26,6 +26,7 @@
 (load-library "mustafa-slime")
 (load-library "mustafa-global-keys")
 (load-library "mustafa-gnus")
+(load-library "mustafa-wanderlust")
 (load-library "mustafa-misc-options")
 
 (custom-set-variables
