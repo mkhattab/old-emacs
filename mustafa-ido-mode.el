@@ -1,4 +1,4 @@
 ;; My ido mode customizations
 
-;none for now
+(setq ido-everywhere t)
 (ido-mode 1)

@@ -8,3 +8,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/wanderlust/wl")
 
 (autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust in a new frame" t)
+(autoload 'wl-draft "wl-draft" "Email Draft" t)
+(autoload 'wl-user-agent-compose "wl-draft" "Compose email" t)
