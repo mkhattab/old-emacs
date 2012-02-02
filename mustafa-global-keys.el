@@ -19,3 +19,10 @@
 
 ;; ido find tags
 (global-set-key "\C-x\C-u" 'm-ido-find-tag)
+
+;; ido bookmarks
+(global-set-key "\C-xrb" '(lambda ()
+			      (interactive)
+			      (bookmark-jump 
+			       (assoc (ido-completing-read "Bookmarks: " 
+							   (mapcar '(lambda (x) (car x)) bookmark-alist)) bookmark-alist))))
