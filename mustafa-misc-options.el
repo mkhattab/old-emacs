@@ -68,3 +68,7 @@
 
 ;; auto-load auto-revert-tail-mode on log files
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
+
+
+;; cua-selection mode
+(cua-selection-mode 1)
