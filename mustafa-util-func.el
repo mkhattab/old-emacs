@@ -53,3 +53,10 @@
 
 
 
+(defun m-paredit-mode-binding (mode-type)
+  (require 'paredit)
+  (define-key mode-type (kbd "(") 'paredit-open-parenthesis)
+  (define-key mode-type (kbd ")") 'paredit-close-parenthesis)
+  (define-key mode-type (kbd "\"") 'paredit-doublequote)
+  (define-key mode-type (kbd "[") 'paredit-open-square)
+  (define-key mode-type (kbd "]") 'paredit-close-square))
