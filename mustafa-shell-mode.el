@@ -16,3 +16,4 @@
 (add-to-list 'term-bind-key-alist '("C-c C-n" . multi-term-next))
 (add-to-list 'term-bind-key-alist '("C-c C-p" . multi-term-prev))
 (add-to-list 'term-bind-key-alist '("C-c C-t" . multi-term))
+(add-to-list 'term-bind-key-alist '("C-c C-y" . term-paste))
