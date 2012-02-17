@@ -41,8 +41,7 @@
 
 (defun m-ido-find-tag ()
   (interactive)
-  (unless (boundp 'tags-completion-table)
-    (call-interactively 'visit-tags-table))
+  (visit-tags-table-buffer)
   (tags-completion-table)
   (let (tag-names)
     (mapc (lambda (x)
