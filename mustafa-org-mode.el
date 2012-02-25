@@ -1,4 +1,5 @@
 ;; Org-mode
+(require 'org-agenda)
 
 (setq org-hide-leading-stars t)
 (setq org-startup-folded nil)
@@ -13,3 +14,9 @@
 
 ;; note and timestamp after completing a task
 (setq org-log-done 'note)
+
+;; find all org files
+(add-hook 'org-agenda-mode-hook (lambda ()
+				  (setq org-agenda-files
+					(split-string (shell-command-to-string
+						       "find ~/ilmengine/ ~/work/ -type f -name \"*.org\" -maxdepth 3")))))
