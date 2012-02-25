@@ -19,4 +19,4 @@
 (add-hook 'org-agenda-mode-hook (lambda ()
 				  (setq org-agenda-files
 					(split-string (shell-command-to-string
-						       "find ~/ilmengine/ ~/work/ -type f -name \"*.org\" -maxdepth 3")))))
+						       "find ~/ilmengine/ -maxdepth 3 -type f -name \"*.org\"")))))
