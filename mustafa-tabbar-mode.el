@@ -6,7 +6,7 @@
   (tabbar-mode 1)
   ;; I use this minor-mode mainly as a global mode (see below):
   (define-minor-mode tabbar-on-custom-mode
-    "Display tabbar on terminals and buffers in fundamental mode only."
+    "Display tabbar on selected modes only."
     :init-value t
     :lighter nil
     :keymap nil
@@ -60,3 +60,6 @@
      ))))
 
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
+
+(setq tabbar-use-images nil)
+(setq tabbar-background-color "#181818")
