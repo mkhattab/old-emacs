@@ -26,3 +26,5 @@
 			      (bookmark-jump 
 			       (assoc (ido-completing-read "Bookmarks: " 
 							   (mapcar '(lambda (x) (car x)) bookmark-alist)) bookmark-alist))))
+;; ibuffer
+(global-set-key "\C-x\C-b" 'ibuffer-other-window)
