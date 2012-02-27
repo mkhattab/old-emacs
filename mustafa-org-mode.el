@@ -15,6 +15,9 @@
 ;; note and timestamp after completing a task
 (setq org-log-done 'note)
 
+;; log changes into a drawer
+(setq org-log-into-drawer t)
+
 ;; find all org files
 (add-hook 'org-agenda-mode-hook (lambda ()
 				  (setq org-agenda-files
