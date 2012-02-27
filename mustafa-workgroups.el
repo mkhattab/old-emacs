@@ -9,7 +9,8 @@
 (setq wg-morph-on nil)
 
 ;; workgroups file
-(wg-load "~/.workgroups")
+;; (if (file-exists-p "~/.workgroups")
+;;     (wg-load "~/.workgroups"))
 
 ;; remap prefix
 (setq wg-prefix-key (kbd "C-c w"))
