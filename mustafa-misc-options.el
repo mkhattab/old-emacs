@@ -69,6 +69,14 @@
 ;; auto-load auto-revert-tail-mode on log files
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
 
-
 ;; cua-selection mode
 (cua-selection-mode 1)
+
+;;tex binary path
+(setenv "PATH" (concat "/usr/local/texlive/2011/bin/x86_64-linux:" (getenv "PATH")))
+
+
+
+
+
+

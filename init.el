@@ -23,12 +23,13 @@
 (load-library "mustafa-markdown-mode")
 (load-library "mustafa-shell-mode")
 (load-library "mustafa-tabbar-mode")
+(load-library "mustafa-coffee-mode")
 (load-library "mustafa-emacs-lisp")
 (load-library "mustafa-workgroups")
 (load-library "mustafa-slime")
 (load-library "mustafa-global-keys")
 (load-library "mustafa-gnus")
-(load-library "mustafa-wanderlust")
+;; (load-library "mustafa-wanderlust")
 (load-library "mustafa-misc-options")
 
 (custom-set-variables
