@@ -12,6 +12,6 @@
 	    (define-key coffee-mode-map [remap comment-dwim] 'coffee-comment-dwim)
 	    (define-key coffee-mode-map "\C-j" 'coffee-newline-and-indent)
 	    (define-key coffee-mode-map "\C-c\C-o\C-s" 'coffee-cos-mode)
-	    (define-key coffee-mode-map "\C-c\C-w" 'coffee-watch))
+	    (define-key coffee-mode-map "\C-c\C-w" 'coffee-watch)))
 
 (setq coffee-js-mode 'js-mode)
