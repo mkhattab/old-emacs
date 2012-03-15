@@ -75,8 +75,6 @@
 ;;tex binary path
 (setenv "PATH" (concat "/usr/local/texlive/2011/bin/x86_64-linux:" (getenv "PATH")))
 
-
-
-
-
-
+;;conkeror for default web browser
+(setq browse-url-generic-program "conkeror")
+(setq browse-url-browser-function 'browse-url-generic)
