@@ -46,17 +46,3 @@
 (autoload 'pymacs-exec "pymacs" nil t)
 (autoload 'pymacs-load "pymacs" nil t)
 (setq pymacs-auto-restart t)
-
-;;; Ropemode, ropemacs
-(pymacs-load "ropemacs" "rope-")
-
-;; Python rope completion stuff
-;; only for linux because auto-completion on mac os x is super slow
-(if (eq system-type 'gnu/linux)
-    (progn
-    (ac-ropemacs-initialize)
-    ;; (setq ac-delay 0.5)
-    (add-hook 'python-mode-hook (lambda ()
-				  (add-to-list 'ac-sources 'ac-source-ropemacs))))
-  nil)
-
