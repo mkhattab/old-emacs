@@ -5,6 +5,13 @@
 			     (split-window)
 			     (other-window 1)
 			     (switch-to-buffer (other-buffer))))
+
+(global-set-key "\C-x3" '(lambda ()
+			   (interactive)
+			   (split-window-horizontally)
+			   (other-window 1)
+			   (switch-to-buffer (other-buffer))))
+
 ;; start shell
 (global-set-key "\C-x!" '(lambda () (interactive) 
 			   (split-window)
