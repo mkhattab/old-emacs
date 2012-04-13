@@ -14,3 +14,4 @@ ac-comphist.dat
 *.orig
 ede-projects.el
 image-dired
+.org*
