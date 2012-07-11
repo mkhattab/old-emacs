@@ -4,7 +4,7 @@
 
 ;; path env variable on mac os x
 (if (eq system-type 'darwin)
-    (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
+    (setenv "PATH" (concat "/usr/local/bin:/opt/local/bin:" (getenv "PATH"))))
 
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/")
@@ -46,7 +46,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "#181818" :foreground "#e4e4ef" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 146 :width normal :foundry "unknown" :family "Monaco"))))
  '(tabbar-button ((t (:inherit tabbar-default :box (:line-width 1 :color "#181810" :style released-button)))))
  '(tabbar-default ((((class color grayscale) (background dark)) (:inherit variable-pitch :background "#181818" :foreground "white" :height 0.8))))
  '(tabbar-selected ((t (:inherit tabbar-default :foreground "red" :box (:line-width 1 :color "#181810" :style pressed-button)))))

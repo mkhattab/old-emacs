@@ -36,10 +36,10 @@
       (add-to-list 'default-frame-alist '(width . 137)))
   ;; mac os x
   (progn
-    (add-to-list 'default-frame-alist '(left . 100))
+    (add-to-list 'default-frame-alist '(left . 20))
     (add-to-list 'default-frame-alist '(top . 100))
-    (add-to-list 'default-frame-alist '(height . 45))
-    (add-to-list 'default-frame-alist '(width . 170))))
+    (add-to-list 'default-frame-alist '(height . 41))
+    (add-to-list 'default-frame-alist '(width . 147))))
 
 ;; tramp ssh config autocompletion
 (require 'tramp)
@@ -73,7 +73,7 @@
 (cua-selection-mode 1)
 
 ;;tex binary path
-(setenv "PATH" (concat "/usr/local/texlive/2011/bin/x86_64-linux:" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/texbin:" (getenv "PATH")))
 
 ;;conkeror for default web browser
 (setq browse-url-generic-program "conkeror")
