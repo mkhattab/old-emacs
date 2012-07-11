@@ -37,7 +37,7 @@
   ;; mac os x
   (progn
     (add-to-list 'default-frame-alist '(left . 20))
-    (add-to-list 'default-frame-alist '(top . 100))
+    (add-to-list 'default-frame-alist '(top . 40))
     (add-to-list 'default-frame-alist '(height . 41))
     (add-to-list 'default-frame-alist '(width . 147))))
 
@@ -78,5 +78,3 @@
 ;;conkeror for default web browser
 (setq browse-url-generic-program "conkeror")
 (setq browse-url-browser-function 'browse-url-generic)
-
-(fset 'quit-window 'delete-window)
