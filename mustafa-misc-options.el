@@ -78,3 +78,5 @@
 ;;conkeror for default web browser
 (setq browse-url-generic-program "conkeror")
 (setq browse-url-browser-function 'browse-url-generic)
+
+(setq mac-command-modifier 'meta)
